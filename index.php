@@ -14,7 +14,21 @@ if(isset($_GET['logout'])){
 
 if(isset($_POST['name'])){
     if($_POST['name'] != ""){
-        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+		switch ($_POST['name']) {
+			case 'A':
+				if ($_POST['pwd'] == 'edward')
+				{
+					$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+				}
+				break;
+			case 'B':
+				if ($_POST['pwd'] == 'collar')
+				{
+					$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+				}
+				break;
+			}
+		}
     }
     else{
         echo '<span class="error">Please type in a name</span>';
@@ -52,7 +66,7 @@ function loginForm(){
 			</div>
 			<div>
 				
-				<input type="text" name="name" id="name" />
+				<input type="hidden" name="name" id="name" />
 				<input type="password" name="pwd" id="pwd" style="width: 150px; height:32px; font-size:30px;" class="hidden" />
 				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:32px; vertical-align:middle" />
 			</div>
