@@ -24,13 +24,40 @@ if(isset($_POST['enter'])){
 function loginForm(){
     echo 
     '<div id="loginform">
-    <p>Please enter your name to continue!</p>
-    <form action="index.php" method="post">
-      <label for="name">Name &mdash;</label>
-      <input type="text" name="name" id="name" />
-      <input type="submit" name="enter" id="enter" value="Enter" />
-    </form>
-  </div>';
+        <form action="index.php" method="post">
+			<div>
+				<a href="#" id="backbtn" class="hidden"
+					onclick="document.getElementById(\'manIcon\').className=\'visible\';
+							document.getElementById(\'boyIcon\').className=\'visible\';
+							document.getElementById(\'pwd\').className=\'hidden\'; 
+							document.getElementById(\'submit\').className=\'hidden\';
+							this.className=\'hidden\';
+							document.getElementById(\'name\').value=\'\';
+							return false;"
+				>&lt;&lt;<br/></a>
+				<img src="img/boy.png" alt="BOY" class="visible" id="boyIcon" 
+					onclick="document.getElementById(\'manIcon\').className=\'hidden\'; 
+							document.getElementById(\'backbtn\').className=\'visible\'; 
+							document.getElementById(\'pwd\').className=\'visible\'; 
+							document.getElementById(\'submit\').className=\'visible\';
+							document.getElementById(\'name\').value=\'A\';
+							return false;"/>
+				<img src="img/man.png" alt="MAN" class="visible" id="manIcon" 
+					onclick="document.getElementById(\'boyIcon\').className=\'hidden\'; 
+							document.getElementById(\'backbtn\').className=\'visible\'; 
+							document.getElementById(\'pwd\').className=\'visible\'; 
+							document.getElementById(\'submit\').className=\'visible\';
+							document.getElementById(\'name\').value=\'B\';
+							return false;"/>
+			</div>
+			<div>
+				
+				<input type="text" name="name" id="name" />
+				<input type="password" name="pwd" id="pwd" style="width: 150px; height:32px; font-size:30px;" class="hidden" />
+				<input type="image" name="submit" id="submit" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:32px; vertical-align:middle" />
+			</div>
+		</form>
+	</div>';
 }
 
 ?>
@@ -40,9 +67,9 @@ function loginForm(){
     <head>
         <meta charset="utf-8" />
 
-        <title>Tuts+ Chat Application</title>
-        <meta name="description" content="Tuts+ Chat Application" />
-        <link rel="stylesheet" href="style.css" />
+        <title>Shuuuuu!</title>
+        <meta name="description" content="Shuuuuu!" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
     <?php
