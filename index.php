@@ -12,28 +12,28 @@ if(isset($_GET['logout'])){
 	header("Location: index.php"); //Redirect the user
 }
 
-	if(isset($_POST['name'])){
-		if ($_POST['name'] == "A"){
-			if ($_POST['pwd'] == "edward"){
-				$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-			}
-			else{
-				echo '<span class="error">wrong pwd A</span>';
-			}
+if(isset($_POST['name'])){
+	if ($_POST['name'] == "A"){
+		if ($_POST['pwd'] == "edward"){
+			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
-		if ($_POST['name'] == "B"){
-			if ($_POST['pwd'] == "collar"){
-				$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-			}
-			else{
-				echo '<span class="error">wrong pwd B</span>';
-			}
+		else{
+			echo '<span class="error">wrong pwd A</span>';
 		}
 	}
-    else{
-        echo '<span class="error">Please type in a name</span>';
-    }
+	if ($_POST['name'] == "B"){
+		if ($_POST['pwd'] == "collar"){
+			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+		}
+		else{
+			echo '<span class="error">wrong pwd B</span>';
+		}
+	}
 }
+else{
+	echo '<span class="error">Please type in a name</span>';
+}
+
 
 function loginForm(){
     echo 
