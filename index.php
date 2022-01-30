@@ -12,7 +12,7 @@ if(isset($_GET['logout'])){
 	header("Location: index.php"); //Redirect the user
 }
 
-if(isset($_POST['enter'])){
+if(isset($_POST['name'])){
     if($_POST['name'] != ""){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
     }
