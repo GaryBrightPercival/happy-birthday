@@ -15,14 +15,14 @@ if(isset($_GET['logout'])){
 if(isset($_POST['name'])){
     if($_POST['name'] != ""){
 		switch ($_POST['name']) {
-			case 'A':
-				if ($_POST['pwd'] == 'edward')
+			case "A":
+				if ($_POST['pwd'] == "edward")
 				{
 					$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 				}
 				break;
-			case 'B':
-				if ($_POST['pwd'] == 'collar')
+			case "B":
+				if ($_POST['pwd'] == "collar")
 				{
 					$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 				}
