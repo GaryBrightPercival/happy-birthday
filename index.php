@@ -17,22 +17,22 @@ if(isset($_POST['name'])){
 		if ($_POST['pwd'] == "edward"){
 			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
-		else{
+		/*else{
 			echo '<span class="error">wrong pwd A</span>';
-		}
+		}*/
 	}
 	if ($_POST['name'] == "B"){
 		if ($_POST['pwd'] == "collar"){
 			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
-		else{
+		/*else{
 			echo '<span class="error">wrong pwd B</span>';
-		}
+		}*/
 	}
 }
-else{
-	echo '<span class="error">Please type in a name</span>';
-}
+/*else{
+	//echo '<span class="error">Please type in a name</span>';
+}*/
 
 
 function loginForm(){
