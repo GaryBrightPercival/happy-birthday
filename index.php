@@ -106,7 +106,7 @@ function loginForm(){
 
             <form name="message" action="">
                 <input name="usermsg" type="text" id="usermsg" />
-				<input type="image" name="submitmsg" id="submitmsg" class="hidden" src="img/send.png" border="0" alt="Send" style="width:auto; height:25px; vertical-align:top" />
+				<input type="image" name="submitmsg" id="submitmsg" src="img/send.png" border="0" alt="Send" style="width:auto; height:25px; vertical-align:top" />
                 <!--<input name="submitmsg" type="submit" id="submitmsg" value="Send" />-->
             </form>
         </div>
@@ -139,7 +139,7 @@ function loginForm(){
                     });
                 }
 
-                setInterval (loadLog, 1500);
+                setInterval (loadLog, 30000);
 
                 $("#exit").click(function () {
                     var exit = confirm("Are you sure you want to end the session?");
