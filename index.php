@@ -6,10 +6,10 @@ if(isset($_GET['logout'])){
 	
 	//Simple exit message
 	if ($_SESSION['name'] == 'A'){
-		$logout_message = "<div class='msgln'><img src='img/boy.png'> Bye! <small>".date("g:i A")."</small></div>"
+		$logout_message = "<div class='msgln'><img src='img/boy.png'> Bye! <small>".date("g:i A")."</small></div>";
 	}
 	if ($_SESSION['name'] == 'B'){
-		$logout_message = "<div class='msgln'><img src='img/man.png'> Bye! <small>".date("g:i A")."</small></div>"
+		$logout_message = "<div class='msgln'><img src='img/man.png'> Bye! <small>".date("g:i A")."</small></div>";
 	}
 	
     //$logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
