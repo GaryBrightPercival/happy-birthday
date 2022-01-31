@@ -93,7 +93,7 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <a id="exit" href="#" style="flow:right;"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a>
+                <a id="exit" href="#" style="float:right;"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a>
             </div>
             <div id="chatbox">
             <?php

@@ -36,6 +36,7 @@
   
   input {
     font-family: "arial";
+	
   }
   
   a {
@@ -86,6 +87,8 @@
     flex: 1;
     border-radius: 4px;
     border: 1px solid #ff9800;
+	padding: 0px 3px;
+	font-size: 20pt;
   }
   
   #name {
