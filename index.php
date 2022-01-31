@@ -64,10 +64,9 @@ function loginForm(){
 							return false;"/>
 			</div>
 			<div>
-				
 				<input type="hidden" name="name" id="name" />
 				<input type="password" name="pwd" id="pwd" style="width: 150px; height:32px; font-size:30px;" class="hidden" />
-				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:32px; vertical-align:middle" />
+				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:25px; vertical-align:top" />
 			</div>
 		</form>
 	</div>';
@@ -94,10 +93,8 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
-                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+                <p class="logout"><a id="exit" href="#"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a></p>
             </div>
-
             <div id="chatbox">
             <?php
             if(file_exists("log.html") && filesize("log.html") > 0){
@@ -109,7 +106,8 @@ function loginForm(){
 
             <form name="message" action="">
                 <input name="usermsg" type="text" id="usermsg" />
-                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+				<input type="image" name="submitmsg" id="submitmsg" class="hidden" src="img/send.png" border="0" alt="Send" style="width:auto; height:25px; vertical-align:top" />
+                <!--<input name="submitmsg" type="submit" id="submitmsg" value="Send" />-->
             </form>
         </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -141,7 +139,7 @@ function loginForm(){
                     });
                 }
 
-                setInterval (loadLog, 2500);
+                setInterval (loadLog, 1500);
 
                 $("#exit").click(function () {
                     var exit = confirm("Are you sure you want to end the session?");

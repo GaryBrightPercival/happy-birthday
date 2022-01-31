@@ -74,8 +74,8 @@
     margin-bottom: 25px;
     padding: 10px;
     background: #fff;
-    height: 300px;
-    width: 530px;
+    height: 100%;
+    width: 800px;
     border: 1px solid #a7a7a7;
     overflow: auto;
     border-radius: 4px;
@@ -94,7 +94,10 @@
     padding: 2px 8px;
   }
   
-  #submitmsg,
+  #submitmsg
+  {
+	  
+  }
   #enter{
     background: #ff9800;
     border: 2px solid #e65100;
@@ -120,8 +123,8 @@
   a#exit {
     color: white;
     background: #c62828;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 2px 2px;
+    border-radius: 2px;
     font-weight: bold;
   }
   
