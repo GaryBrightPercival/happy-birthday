@@ -47,8 +47,7 @@ function loginForm(){
 							document.getElementById(\'enter\').className=\'hidden\';
 							this.className=\'hidden\';
 							document.getElementById(\'name\').value=\'\';
-							return false;"
-				>&lt;&lt;<br/></a>
+							return false;" ><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a><br/>
 				<img src="img/boy.png" alt="BOY" class="visible" id="boyIcon" 
 					onclick="document.getElementById(\'manIcon\').className=\'hidden\'; 
 							document.getElementById(\'backbtn\').className=\'visible\'; 
