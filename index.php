@@ -61,6 +61,7 @@ function loginForm(){
 							document.getElementById(\'pwd\').className=\'visible\'; 
 							document.getElementById(\'enter\').className=\'visible\';
 							document.getElementById(\'name\').value=\'A\';
+							document.getElementById(\'pwd\').focus(); 
 							return false;"/>
 				<img src="img/man.png" alt="MAN" class="visible" id="manIcon" 
 					onclick="document.getElementById(\'boyIcon\').className=\'hidden\'; 
@@ -68,6 +69,7 @@ function loginForm(){
 							document.getElementById(\'pwd\').className=\'visible\'; 
 							document.getElementById(\'enter\').className=\'visible\';
 							document.getElementById(\'name\').value=\'B\';
+							document.getElementById(\'pwd\').focus(); 
 							return false;"/>
 			</div>
 			<div>
