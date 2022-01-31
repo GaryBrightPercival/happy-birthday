@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$A_TEMPLATE = "<div class='A'><img src='img/boy.png'><p>[MSG]</p><span>[TIME]</span></div>"
-$B_TEMPLATE = "<div class='B'><img src='img/man.png'><p>[MSG]</p><span>[TIME]</span></div>"
+$A_TEMPLATE = "<div class='A'><img src='img/boy.png'><p>[MSG]</p><span>[TIME]</span></div>";
+$B_TEMPLATE = "<div class='B'><img src='img/man.png'><p>[MSG]</p><span>[TIME]</span></div>";
 
 
 if(isset($_SESSION['name'])){
