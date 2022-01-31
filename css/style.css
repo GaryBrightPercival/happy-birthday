@@ -138,6 +138,8 @@
   
   .msgln {
     margin: 0 0 5px 0;
+	font-size: 16pt;
+	color: #666;
   }
   
   .msgln span.left-info {
@@ -162,6 +164,12 @@
   
   .msgln b.user-name-left {
     background: orangered;
+  }
+  
+  .msgln img
+  {
+	 height:22px; 
+	 vertical-align:middle;
   }
   
 .A {
@@ -225,4 +233,8 @@
 {
 	font-size: 20pt;
 }  
-  
+ 
+ .smallIcon
+ {
+	 
+ }

@@ -5,7 +5,14 @@ session_start();
 if(isset($_GET['logout'])){    
 	
 	//Simple exit message
-    $logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
+	if ($_SESSION['name'] == 'A'){
+		$logout_message = "<div class='msgln'><img src='img/boy.png'> Bye! <small>".date("g:i A")."</small></div>"
+	}
+	if ($_SESSION['name'] == 'B'){
+		$logout_message = "<div class='msgln'><img src='img/man.png'> Bye! <small>".date("g:i A")."</small></div>"
+	}
+	
+    //$logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
 	
 	session_destroy();
@@ -93,7 +100,7 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <a id="exit" href="#" style="float:right;"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a>
+                <a id="exit" href="#" style="float:right;"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:26px; height:auto;" /></a>
             </div>
             <div id="chatbox">
             <?php
