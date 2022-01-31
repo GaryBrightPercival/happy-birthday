@@ -93,7 +93,7 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <p class="logout"><a id="exit" href="#"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a></p>
+                <a id="exit" href="#" style="flow:right;"><img src="img/NO.png" alt="NO!" id="noIcon" style="width:20px; height:auto;" /></a>
             </div>
             <div id="chatbox">
             <?php
@@ -139,7 +139,7 @@ function loginForm(){
                     });
                 }
 
-                setInterval (loadLog, 30000);
+                setInterval (loadLog, 2000);
 
                 $("#exit").click(function () {
                     var exit = confirm("Are you sure you want to end the session?");

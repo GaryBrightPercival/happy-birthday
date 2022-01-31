@@ -49,9 +49,9 @@
   #wrapper,
   #loginform {
     margin: 0 auto;
-    padding-bottom: 25px;
+    /*padding-bottom: 25px;*/
     background: #eee;
-    width: 600px;
+    width: 800px;
     max-width: 100%;
     /*border: 2px solid #212121;*/
     border-radius: 4px;
@@ -71,11 +71,11 @@
   #chatbox {
     text-align: left;
     margin: 0 auto;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
     padding: 10px;
     background: #fff;
-    height: 300px;
-    width: 530px;
+    height: 600px;
+    width: 750px;
     border: 1px solid #a7a7a7;
     overflow: auto;
     border-radius: 4px;
@@ -118,20 +118,20 @@
   
   #menu {
     padding: 15px 25px;
-    display: flex;
+    /*display: flex;*/
   }
   
   #menu p.welcome {
     flex: 1;
   }
   
-  a#exit {
+  /*a#exit {
     color: white;
     background: #c62828;
     padding: 2px 2px;
     border-radius: 2px;
     font-weight: bold;
-  }
+  }*/
   
   .msgln {
     margin: 0 0 5px 0;
