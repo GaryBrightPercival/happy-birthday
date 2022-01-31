@@ -84,6 +84,7 @@ function loginForm(){
         <title>Shuuuuu!</title>
         <meta name="description" content="Shuuuuu!" />
         <link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" href="img/shushing.png" type="image/icon type" />
     </head>
     <body>
     <?php
