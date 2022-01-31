@@ -21,7 +21,7 @@ if(isset($_GET['logout'])){
 
 if(isset($_POST['name'])){
 	if ($_POST['name'] == "A"){
-		if ($_POST['pwd'] == "edward"){
+		if ($_POST['pwd'] == "3dward"){
 			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
 		/*else{
@@ -29,7 +29,7 @@ if(isset($_POST['name'])){
 		}*/
 	}
 	if ($_POST['name'] == "B"){
-		if ($_POST['pwd'] == "collar"){
+		if ($_POST['pwd'] == "coll@r"){
 			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
 		/*else{
