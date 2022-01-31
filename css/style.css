@@ -152,3 +152,66 @@
   .msgln b.user-name-left {
     background: orangered;
   }
+  
+.A {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.B {
+  background-color: #ddd;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.A::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.B::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.A img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.B img {
+  float: right;
+  max-width: 60px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.A span
+{
+	color: #999;
+}
+
+.A p
+{
+	font-size: 20pt;
+}
+
+.B span
+{
+	color: #999;
+}
+.B p
+{
+	font-size: 20pt;
+}  
+  
