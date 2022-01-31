@@ -7,18 +7,16 @@ $B_TEMPLATE = "<div class='B'><img src='img/man.png'><p>[MSG]</p><span>[TIME]</s
 //$eightHours = DateInterval::createFromDateString('8 hours');
 //$msgdate = date_add(date(),$eightHours);
 
-//$msgdate = date_add($msgdate,$eightHours);
-
 if(isset($_SESSION['name'])){
     $text = $_POST['text'];
 	
 	if ($_SESSION['name'] == 'A'){
 		$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($text)), $A_TEMPLATE);
-		$text_message = str_replace("[TIME]", date(), $text_message);
+		$text_message = str_replace("[TIME]", date("g:i A"), $text_message);
 	}
 	if ($_SESSION['name'] == 'B'){
 		$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($text)), $B_TEMPLATE);
-		$text_message = str_replace("[TIME]", date(), $text_message);
+		$text_message = str_replace("[TIME]", date("g:i A"), $text_message);
 	}
 	
 	//$text_message = "<div class='msgln'><span class='chat-time'>".date("g:i A")."</span> <b class='user-name'>".$_SESSION['name']."</b> ".stripslashes(htmlspecialchars($text))."<br></div>";
