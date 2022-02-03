@@ -85,12 +85,13 @@
   }
   
   #usermsg {
-    flex: 1;
-	margin: 5px auto;
+    /*flex: 1;*/
+	/*margin: 5px auto;*/
     border-radius: 4px;
     border: 1px solid #ff9800;
 	padding: 0px 3px;
 	font-size: 20pt;
+	width:95%;
   }
 /*  
   #name {
@@ -125,11 +126,11 @@
     padding: 15px 15px 0px;
     /*display: flex;*/
   }
-  
+/*  
   #menu p.welcome {
     flex: 1;
   }
-  
+*/  
   /*a#exit {
     color: white;
     background: #c62828;
@@ -137,13 +138,13 @@
     border-radius: 2px;
     font-weight: bold;
   }*/
-  
+ /* 
   .msgln {
     margin: 0 0 5px 0;
 	font-size: 16pt;
 	color: #666;
   }
-  
+/*  
   .msgln span.left-info {
     color: orangered;
   }
@@ -173,7 +174,7 @@
 	 height:22px; 
 	 vertical-align:middle;
   }
-  
+*/  
 .A {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
@@ -203,7 +204,7 @@
 
 .A img {
   float: left;
-  max-width: 60px;
+  max-width: 50px;
   width: 100%;
   margin-right: 20px;
   border-radius: 50%;
@@ -211,7 +212,7 @@
 
 .B img {
   float: right;
-  max-width: 60px;
+  max-width: 50px;
   width: 100%;
   margin-left: 20px;
   margin-right:0;
@@ -224,7 +225,7 @@
 
 .A p
 {
-	font-size: 20pt;
+	font-size: 24pt;
 }
 
 .B span
@@ -233,7 +234,7 @@
 }
 .B p
 {
-	font-size: 20pt;
+	font-size: 24pt;
 }  
  
  .smallIcon
