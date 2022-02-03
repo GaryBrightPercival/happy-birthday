@@ -89,7 +89,7 @@
 	/*margin: 5px auto;*/
     border-radius: 4px;
     border: 1px solid #ff9800;
-	padding: 0px 3px;
+	padding: 5px;
 	font-size: 20pt;
 	width:95%;
   }
@@ -103,11 +103,13 @@
   #submitmsg
   {
 	background: #ff9800;
-    /*border: 2px solid #e65100;*/
-    color: white;
-    padding: 2px;
+    border: 2px solid #e65100;
+    /*color: white;*/
+    padding: 6px;
     /*font-weight: bold;*/
     border-radius: 4px;
+	margin-top: 2px;
+}
   }
   #enter{
     background: #ff9800;
