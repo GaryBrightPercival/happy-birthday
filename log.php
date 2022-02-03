@@ -9,23 +9,20 @@ try {
 		$sql = 'SELECT id, ts, who, msg FROM chat_log WHERE id >= (SELECT MIN(id) hh FROM (SELECT id FROM chat_log order by id desc LIMIT 8) a) ORDER BY id';
 		
 		$statement = $pdo->query($sql);
-		echo "statement pass";
+//		echo "statement pass";
 		$msgs = $statement->fetchAll(PDO::FETCH_ASSOC);
-		echo "fetchAll pass";
+//		echo "fetchAll pass";
 		
 		if ($msgs) {
-			echo '$msg is not null!';
-			echo $msgs;
-			foreach ($row as $msgs) {
-				echo $row;
-				//$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
-				//$text_message = str_replace("[TIME]", $row['ts'], $text_message);
-				//echo $text_message;
+			foreach ($msgs as $row) {
+				$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
+				$text_message = str_replace("[TIME]", $row['ts'], $text_message);
+				echo $text_message;
 			}
 		}
 		else
 		{
-			echo '$msg is null!';
+			echo 'No Message!';
 		}		
 	}
 } catch (PDOException $e) {
