@@ -13,12 +13,12 @@ try {
 		echo $who."<br/>"
 		echo $sql."<br/>"
 		
-		$statement = $pdo->prepare($sql);
+		//$statement = $pdo->prepare($sql);
 
-		$statement->execute([
+		/*$statement->execute([
 			':text' => $text,
 			':who' => $who
-		]);
+		]);*/
 	}
 } catch (PDOException $e) {
 	die($e->getMessage());
