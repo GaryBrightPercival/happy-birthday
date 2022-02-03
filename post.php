@@ -6,16 +6,16 @@ if(isset($_SESSION['name'])){
 	try {	
 		$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 		if ($pdo) {
-			$text = stripslashes(htmlspecialchars($_POST['text']));
+			$msg = stripslashes(htmlspecialchars($_POST['text']));
 			$who = $_SESSION['name'];
 			$sql = 'INSERT INTO CHAT_LOG (TS, WHO, MSG) VALUES(NOW(), :who, :msg)';
-
+		
 			$statement = $pdo->prepare($sql);
 
 			$statement->execute([
-				':text' => $text,
+				':msg' => $msg,
 				':who' => $who
-			]);
+			]);			
 		}
 	} catch (PDOException $e) {
 		die($e->getMessage());
