@@ -8,7 +8,7 @@ try {
 		$msg = stripslashes(htmlspecialchars('test time'));
 		$who = 'B';
 		$sql = "INSERT INTO CHAT_LOG (TS, WHO, MSG) VALUES(NOW() + INTERVAL '8 hours', :who, :msg)";
-		echo $sql
+		echo $sql;
 		$statement = $pdo->prepare($sql);
 
 		$statement->execute([
