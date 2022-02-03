@@ -8,7 +8,7 @@ if(isset($_SESSION['name'])){
 		if ($pdo) {
 			$msg = stripslashes(htmlspecialchars($_POST['text']));
 			$who = $_SESSION['name'];
-			$sql = 'INSERT INTO CHAT_LOG (TS, WHO, MSG) VALUES(NOW(), :who, :msg)';
+			$sql = 'INSERT INTO CHAT_LOG (TS, WHO, MSG) VALUES(NOW() + INTERVAL "8 hours", :who, :msg)';
 		
 			$statement = $pdo->prepare($sql);
 
