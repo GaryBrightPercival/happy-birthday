@@ -3,8 +3,9 @@
 $host= 'ec2-44-193-188-118.compute-1.amazonaws.com';
 $db = 'dd55qlmt6n84j6';
 $user = 'nitldapiwouagu';
-$password = '31d12efab6008cccc9dea29fe0133725eef19fdaedc4ea0ed37b83046dac4422'; // change to your password
-$connStr = "Host=".$host." dbname=".$db." user=".$user." password=".$password
+$password = '31d12efab6008cccc9dea29fe0133725eef19fdaedc4ea0ed37b83046dac4422'; 
+
+$connStr = "Host=".$host." dbname=".$db." user=".$user." password=".$password;
 
 $A_TEMPLATE = "<div class='A'><img src='img/boy.png'><p>[MSG]</p><span>[TIME]</span></div>";
 $B_TEMPLATE = "<div class='B'><img src='img/man.png'><p>[MSG]</p><span>[TIME]</span></div>";
