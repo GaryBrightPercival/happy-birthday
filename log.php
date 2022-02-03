@@ -1,31 +1,35 @@
 <?php
 require_once 'config.php';
 session_start();
-//echo $connStr;
 
-$dbconn = pg_connect($connStr) or die("Could not connect");
-echo "Connected successfully";
+try {
+	$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+	if ($pdo) {
+		echo "Connected to the $db database successfully!";
+	}
+	$sql = 'SELECT id, ts, who, msg FROM chat_log WHERE id >= (SELECT MIN(id) hh FROM (SELECT id FROM chat_log order by id desc LIMIT 8) a) ORDER BY id';
 
+	$statement = $pdo->query($sql);
 
-$query = 'SELECT * FROM chat_log ORDER BY id';
-$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+	// get all publishers
+	$msgs = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-// Printing results in HTML
-echo "<table>\n";
-while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo "\t<tr>\n";
-    foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
-    }
-    echo "\t</tr>\n";
+	if ($msgs) {
+		foreach ($row as $msgs) {
+			//echo $row['id'] . '<br>';
+			$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
+			$text_message = str_replace("[TIME]", $row['ts'], $text_message);
+			echo $text_message;
+		}
+	}
+	
+	
+} catch (PDOException $e) {
+	die($e->getMessage());
+} finally {
+	if ($pdo) {
+		$pdo = null;
+	}
 }
-echo "</table>\n";
-
-// Free resultset
-pg_free_result($result);
-
-// Closing connection
-
-pg_close($dbconn);
 
 ?>

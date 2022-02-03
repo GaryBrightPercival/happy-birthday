@@ -6,6 +6,7 @@ $user = 'nitldapiwouagu';
 $password = '31d12efab6008cccc9dea29fe0133725eef19fdaedc4ea0ed37b83046dac4422'; 
 
 $connStr = "host=".$host." dbname=".$db." user=".$user." password=".$password;
+$dsn = "pgsql:host=".$host.";port=5432;dbname=".$db.";";
 
 $A_TEMPLATE = "<div class='A'><img src='img/boy.png'><p>[MSG]</p><span>[TIME]</span></div>";
 $B_TEMPLATE = "<div class='B'><img src='img/man.png'><p>[MSG]</p><span>[TIME]</span></div>";
