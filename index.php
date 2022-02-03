@@ -1,5 +1,5 @@
 <?php
-
+require_once 'config.php';
 session_start();
 
 if(isset($_GET['logout'])){    
@@ -21,20 +21,14 @@ if(isset($_GET['logout'])){
 
 if(isset($_POST['name'])){
 	if ($_POST['name'] == "A"){
-		if ($_POST['pwd'] == "3dward"){
+		if ($_POST['pwd'] == $A_PWD){
 			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
-		/*else{
-			echo '<span class="error">wrong pwd A</span>';
-		}*/
 	}
 	if ($_POST['name'] == "B"){
-		if ($_POST['pwd'] == "coll@r"){
+		if ($_POST['pwd'] == $B_PWD){
 			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
 		}
-		/*else{
-			echo '<span class="error">wrong pwd B</span>';
-		}*/
 	}
 }
 /*else{
@@ -87,7 +81,6 @@ function loginForm(){
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-
         <title>Shuuuuu!</title>
         <meta name="description" content="Shuuuuu!" />
         <link rel="stylesheet" href="css/style.css" />
