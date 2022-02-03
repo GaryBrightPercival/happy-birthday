@@ -17,9 +17,10 @@ try {
 			echo '$msg is not null!';
 			echo $msgs;
 			foreach ($row as $msgs) {
-				$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
-				$text_message = str_replace("[TIME]", $row['ts'], $text_message);
-				echo $text_message;
+				echo $row;
+				//$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
+				//$text_message = str_replace("[TIME]", $row['ts'], $text_message);
+				//echo $text_message;
 			}
 		}
 		else
