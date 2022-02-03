@@ -6,13 +6,13 @@ try {
 	$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 	if ($pdo) {
 		//echo "Connected to the $db database successfully!";
-		$sql = 'SELECT id, ts, who, msg FROM chat_log WHERE id >= (SELECT MIN(id) hh FROM (SELECT id FROM chat_log order by id desc LIMIT :rowCount) a) ORDER BY id';
+		$sql = 'SELECT id, ts, who, msg FROM chat_log WHERE id >= (SELECT MIN(id) hh FROM (SELECT id FROM chat_log order by id desc LIMIT 100) a) ORDER BY id';
 		
-		//$statement = $pdo->query($sql);
+		$statement = $pdo->query($sql);
 		
-		$statement = $pdo->prepare($sql);
-		$statement->bindParam(':rowCount', 100, PDO::PARAM_INT);
-		$statement->execute();
+		//$statement = $pdo->prepare($sql);
+		//$statement->bindParam(':rowCount', 100, PDO::PARAM_INT);
+		//$statement->execute();
 		
 //		echo "statement pass";
 		$msgs = $statement->fetchAll(PDO::FETCH_ASSOC);
