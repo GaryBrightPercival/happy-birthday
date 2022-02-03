@@ -7,11 +7,12 @@ try {
 	if ($pdo) {
 		echo "Connected to the $db database successfully!";
 		$sql = 'SELECT id, ts, who, msg FROM chat_log WHERE id >= (SELECT MIN(id) hh FROM (SELECT id FROM chat_log order by id desc LIMIT 8) a) ORDER BY id';
-
-		echo $sql;
+		
 		$statement = $pdo->query($sql);
+		echo "statement pass";
 		$msgs = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+		echo "fetchAll pass";
+		
 		if ($msgs) {
 			foreach ($row as $msgs) {
 				echo $row['msg'] . '<br>';
