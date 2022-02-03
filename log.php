@@ -5,18 +5,11 @@ session_start();
 try {
 	$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 	if ($pdo) {
-		//echo "Connected to the $db database successfully!";
 		$sql = 'SELECT id, ts, who, msg FROM chat_log WHERE id >= (SELECT MIN(id) hh FROM (SELECT id FROM chat_log order by id desc LIMIT 100) a) ORDER BY id';
 		
 		$statement = $pdo->query($sql);
-		
-		//$statement = $pdo->prepare($sql);
-		//$statement->bindParam(':rowCount', 100, PDO::PARAM_INT);
-		//$statement->execute();
-		
-//		echo "statement pass";
 		$msgs = $statement->fetchAll(PDO::FETCH_ASSOC);
-//		echo "fetchAll pass";
+
 		
 		if ($msgs) {
 			foreach ($msgs as $row) {
@@ -35,7 +28,7 @@ try {
 				}
 				else
 				{
-					$text_message = $row['msg']
+					$text_message = $row['msg'];
 				}					
 				echo $text_message;
 			}
