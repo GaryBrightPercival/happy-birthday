@@ -91,7 +91,7 @@
     border: 1px solid #ff9800;
 	padding: 5px;
 	font-size: 20pt;
-	width:95%;
+	width:90%;
   }
 /*  
   #name {
@@ -222,21 +222,23 @@
 
 .A span
 {
+	font-size: 12pt;
 	color: #999;
 }
 
 .A p
 {
-	font-size: 24pt;
+	font-size: 30t;
 }
 
 .B span
 {
+	font-size: 12pt;
 	color: #999;
 }
 .B p
 {
-	font-size: 24pt;
+	font-size: 30pt;
 }  
  
  .smallIcon

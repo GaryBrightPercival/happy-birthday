@@ -69,7 +69,7 @@ function loginForm(){
 			<div>
 				<input type="hidden" name="name" id="name" />
 				<input type="password" name="pwd" id="pwd" style="width: 150px; height:32px; font-size:30px;" class="hidden" />
-				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:30px; vertical-align:sub" />
+				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:23px; vertical-align:sub" />
 			</div>
 		</form>
 	</div>';
