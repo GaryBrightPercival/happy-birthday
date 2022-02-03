@@ -11,7 +11,7 @@ $B_TEMPLATE = "<div class='B'><img src='img/man.png'><p>[MSG]</p><span>[TIME]</s
 $A_BYE_TEMPLATE = "<div class='msgln'><img src='img/boy.png'> Bye! <small>[TIME]</small></div>";
 $B_BYE_TEMPLATE = "<div class='msgln'><img src='img/man.png'> Bye! <small>[TIME]</small></div>";
 
-$A_PWD = '3dward'
-$B_PWD = 'coll@r'
+$A_PWD = '3dward';
+$B_PWD = 'coll@r';
 
 ?>
