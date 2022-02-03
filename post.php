@@ -22,8 +22,8 @@ if(isset($_SESSION['name'])){
 	} finally {
 		if ($pdo) {
 			$pdo = null;
+		}
 	}
-
 /*	
 	if ($_SESSION['name'] == 'A'){
 		$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($text)), $A_TEMPLATE);
