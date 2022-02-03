@@ -14,8 +14,9 @@ try {
 		echo "fetchAll pass";
 		
 		if ($msgs) {
+			echo '$msg is not null!';
+			echo $msgs;
 			foreach ($row as $msgs) {
-				echo $row['msg'] . '<br>';
 				$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
 				$text_message = str_replace("[TIME]", $row['ts'], $text_message);
 				echo $text_message;
