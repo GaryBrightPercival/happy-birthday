@@ -20,8 +20,23 @@ try {
 		
 		if ($msgs) {
 			foreach ($msgs as $row) {
-				$text_message = str_replace("[MSG]", stripslashes(htmlspecialchars($row['msg'])), $A_TEMPLATE);
-				$text_message = str_replace("[TIME]", $row['ts'], $text_message);
+				if ($row['who'] == 'A')
+				{
+					$template = $A_TEMPLATE;
+				}
+				if ($row['who'] == 'B')
+				{
+					$template = $B_TEMPLATE;
+				}
+				if ($template)
+				{
+					$text_message = str_replace("[MSG]", $row['msg'], $template);
+					$text_message = str_replace("[TIME]", $row['ts'], $text_message);
+				}
+				else
+				{
+					$text_message = $row['msg']
+				}					
 				echo $text_message;
 			}
 		}
