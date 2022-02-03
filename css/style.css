@@ -103,10 +103,10 @@
   #submitmsg
   {
 	background: #ff9800;
-    border: 2px solid #e65100;
+    /*border: 2px solid #e65100;*/
     color: white;
-    padding: 1px;
-    font-weight: bold;
+    padding: 2px;
+    /*font-weight: bold;*/
     border-radius: 4px;
   }
   #enter{
