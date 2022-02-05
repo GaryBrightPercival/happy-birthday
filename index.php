@@ -98,12 +98,6 @@ function loginForm(){
                 <a id="exit" href="#" ><img src="img/NO.png" alt="NO!" id="noIcon" style="width:26px; height:auto;" /></a>
             </div>
             <div id="chatbox">
-            <?php
-            if(file_exists("log.php") && filesize("log.php") > 0){
-                $contents = file_get_contents("log.php");          
-                echo $contents;
-            }
-            ?>
             </div>
 
             <form name="message" action="">
@@ -140,7 +134,7 @@ function loginForm(){
                         }
                     });
                 }
-
+				loadLog();
                 setInterval (loadLog, 5000);
 
                 $("#exit").click(function () {
