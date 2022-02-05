@@ -99,8 +99,8 @@ function loginForm(){
             </div>
             <div id="chatbox">
             <?php
-            if(file_exists("log.html") && filesize("log.html") > 0){
-                $contents = file_get_contents("log.html");          
+            if(file_exists("log.php") && filesize("log.php") > 0){
+                $contents = file_get_contents("log.php");          
                 echo $contents;
             }
             ?>
@@ -141,7 +141,7 @@ function loginForm(){
                     });
                 }
 
-                setInterval (loadLog, 2000);
+                setInterval (loadLog, 5000);
 
                 $("#exit").click(function () {
                     //var exit = confirm("Are you sure you want to end the session?");
