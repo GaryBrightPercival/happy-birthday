@@ -3,46 +3,15 @@ require_once 'config.php';
 //session_start();
 
 if(isset($_GET['logout'])){    
-	
-	//Simple exit message
-/*	if ($_SESSION['name'] == 'A'){
-		$logout_message = "<div class='msgln'><img src='img/boy.png'> Bye! <small>".date("g:i A")."</small></div>";
-	}
-	if ($_SESSION['name'] == 'B'){
-		$logout_message = "<div class='msgln'><img src='img/man.png'> Bye! <small>".date("g:i A")."</small></div>";
-	}
-	
-    //$logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
-    file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
-*/	
 	setcookie($COOKIE_NAME, "", time() - 3600 );
 	//session_destroy();
 	header("Location: index.php"); //Redirect the user
 }
 
-if(isset($_POST[$NAME_LABEL])){
-	if ($_POST[$NAME_LABEL] == "A"){
-		if ($_POST[$PWD_LABEL] == $A_PWD){
-			setcookie($COOKIE_NAME, stripslashes(htmlspecialchars($_POST[$NAME_LABEL])), time() + (86400 * 30), "/");
-			//$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
-		}
-	}
-	if ($_POST[$NAME_LABEL] == "B"){
-		if ($_POST[$PWD_LABEL] == $B_PWD){
-			setcookie($COOKIE_NAME, stripslashes(htmlspecialchars($_POST[$NAME_LABEL])), time() + (86400 * 30), "/");
-			//$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
-		}
-	}
-}
-/*else{
-	//echo '<span class="error">Please type in a name</span>';
-}*/
-
-
 function loginForm(){
     echo 
     '<div id="loginform">
-        <form action="index.php" method="post">
+        <form action="login.php" method="post">
 			<div>
 				<a href="#" id="backbtn" class="hidden"
 					onclick="document.getElementById(\'manIcon\').className=\'visible\';
@@ -72,7 +41,7 @@ function loginForm(){
 			<div>
 				<input type="hidden" name="name" id="name" />
 				<input type="password" name="pwd" id="pwd" style="width: 150px; height:32px; font-size:30px;" class="hidden" />
-				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Let go!" style="width:auto; height:23px; vertical-align:sub" />
+				<input type="image" name="enter" id="enter" class="hidden" src="img/key.png" border="0" alt="Lets go!" style="width:auto; height:23px; vertical-align:sub" />
 			</div>
 		</form>
 	</div>';
