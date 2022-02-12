@@ -20,5 +20,6 @@ $B_PWD = 'coll@r';
 $COOKIE_NAME = 'who';
 $NAME_LABEL = 'name';
 $PWD_LABEL = 'pwd';
+$TEXT_LABEL = 'text';
 
 ?>

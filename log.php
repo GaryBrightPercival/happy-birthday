@@ -2,13 +2,6 @@
 require_once 'config.php';
 session_start();
 
-if(!isset($_COOKIE[$COOKIE_NAME])) {
-  echo "Cookie named '" . $COOKIE_NAME . "' is not set!";
-} else {
-  echo "Cookie '" . $COOKIE_NAME . "' is set!<br>";
-  echo "Value is: " . $_COOKIE[$COOKIE_NAME];
-}
-
 try {
 	$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 	if ($pdo) {
