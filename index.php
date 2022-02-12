@@ -1,6 +1,6 @@
 <?php
 require_once 'config.php';
-session_start();
+//session_start();
 
 if(isset($_GET['logout'])){    
 	
@@ -16,7 +16,7 @@ if(isset($_GET['logout'])){
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
 */	
 	setcookie($COOKIE_NAME, "", time() - 3600 );
-	session_destroy();
+	//session_destroy();
 	header("Location: index.php"); //Redirect the user
 }
 
@@ -24,13 +24,13 @@ if(isset($_POST[$NAME_LABEL])){
 	if ($_POST[$NAME_LABEL] == "A"){
 		if ($_POST[$PWD_LABEL] == $A_PWD){
 			setcookie($COOKIE_NAME, stripslashes(htmlspecialchars($_POST[$NAME_LABEL])), time() + (86400 * 30), "/");
-			$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
+			//$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
 		}
 	}
 	if ($_POST[$NAME_LABEL] == "B"){
 		if ($_POST[$PWD_LABEL] == $B_PWD){
 			setcookie($COOKIE_NAME, stripslashes(htmlspecialchars($_POST[$NAME_LABEL])), time() + (86400 * 30), "/");
-			$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
+			//$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
 		}
 	}
 }
@@ -90,7 +90,7 @@ function loginForm(){
     </head>
     <body>
     <?php
-    if(!isset($_SESSION['name'])){
+    if(!isset($_COOKIE[$COOKIE_NAME])){
         loginForm();
     }
     else {
