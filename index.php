@@ -15,19 +15,22 @@ if(isset($_GET['logout'])){
     //$logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
 */	
+	setcookie($COOKIE_NAME, "", time() - 3600 );
 	session_destroy();
 	header("Location: index.php"); //Redirect the user
 }
 
-if(isset($_POST['name'])){
-	if ($_POST['name'] == "A"){
-		if ($_POST['pwd'] == $A_PWD){
-			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+if(isset($_POST[$NAME_LABEL])){
+	if ($_POST[$NAME_LABEL] == "A"){
+		if ($_POST[$PWD_LABEL] == $A_PWD){
+			setcookie($COOKIE_NAME, stripslashes(htmlspecialchars($_POST[$NAME_LABEL])), time() + (86400 * 30), "/");
+			$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
 		}
 	}
-	if ($_POST['name'] == "B"){
-		if ($_POST['pwd'] == $B_PWD){
-			$_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+	if ($_POST[$NAME_LABEL] == "B"){
+		if ($_POST[$PWD_LABEL] == $B_PWD){
+			setcookie($COOKIE_NAME, stripslashes(htmlspecialchars($_POST[$NAME_LABEL])), time() + (86400 * 30), "/");
+			$_SESSION[$NAME_LABEL] = stripslashes(htmlspecialchars($_POST[$NAME_LABEL]));
 		}
 	}
 }
@@ -74,7 +77,6 @@ function loginForm(){
 		</form>
 	</div>';
 }
-
 ?>
 
 <!DOCTYPE html>

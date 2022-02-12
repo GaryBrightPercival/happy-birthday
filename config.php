@@ -17,4 +17,8 @@ $B_BYE_TEMPLATE = "<div class='msgln'><img src='img/man.png'> Bye! <small>[TIME]
 $A_PWD = '3dward';
 $B_PWD = 'coll@r';
 
+$COOKIE_NAME = "who"
+$NAME_LABEL = "name"
+$PWD_LABEL = "pwd"
+
 ?>
